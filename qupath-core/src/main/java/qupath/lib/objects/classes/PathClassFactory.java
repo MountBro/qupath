@@ -46,7 +46,9 @@ public final class PathClassFactory {
 	private PathClassFactory() {
 		throw new AssertionError();
 	}
-	
+
+	// 这里的PathClass需要修改
+	// 目前的bug是：需要右键reset一下才能显示修改的class
 	/**
 	 * Enum representing standard classifications. Exists mostly to ensure consisting naming (including capitalization).
 	 */
@@ -93,6 +95,7 @@ public final class PathClassFactory {
 		 * General class to represent something 'negative'
 		 */
 		NEGATIVE;
+
 		
 		
 		PathClass getPathClass() {
@@ -110,7 +113,7 @@ public final class PathClassFactory {
 			case REGION:
 				return PathClassFactory.getPathClass("Region*", ColorTools.packRGB(0, 0, 180));
 			case STROMA:
-				return PathClassFactory.getPathClass("Stroma", ColorTools.packRGB(150, 200, 150));
+				return PathClassFactory.getPathClass("WhatHappened", ColorTools.packRGB(0, 0, 0));
 			case TUMOR:
 				return PathClassFactory.getPathClass("Tumor", ColorTools.packRGB(200, 0, 0));
 			case POSITIVE:
