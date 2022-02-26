@@ -94,7 +94,9 @@ public final class PathClassFactory {
 		/**
 		 * General class to represent something 'negative'
 		 */
-		NEGATIVE;
+		NEGATIVE,
+		MAOGAN
+		;
 
 		
 		
@@ -113,18 +115,19 @@ public final class PathClassFactory {
 			case REGION:
 				return PathClassFactory.getPathClass("Region*", ColorTools.packRGB(0, 0, 180));
 			case STROMA:
-				return PathClassFactory.getPathClass("WhatHappened", ColorTools.packRGB(0, 0, 0));
+				return PathClassFactory.getPathClass("毛干", ColorTools.packRGB(0, 0, 0));
 			case TUMOR:
 				return PathClassFactory.getPathClass("Tumor", ColorTools.packRGB(200, 0, 0));
 			case POSITIVE:
 				return PathClassFactory.getPositive(null);
 			case NEGATIVE:
 				return PathClassFactory.getNegative(null);
+			case MAOGAN:
+				return PathClassFactory.getPathClass("毛干", ColorTools.packRGB(200, 200, 200));
 			default:
 				throw new IllegalArgumentException("Unknown value!");
 			}
 		}
-		
 	}
 
 	private static Map<String, PathClass> mapPathClasses = new HashMap<>();
