@@ -47,7 +47,7 @@ public final class PathClassFactory {
 		throw new AssertionError();
 	}
 
-	// 这里的PathClass需要修改
+	// FIXME 这里的PathClass需要修改
 	// 目前的bug是：需要右键reset一下才能显示修改的class
 	/**
 	 * Enum representing standard classifications. Exists mostly to ensure consisting naming (including capitalization).
