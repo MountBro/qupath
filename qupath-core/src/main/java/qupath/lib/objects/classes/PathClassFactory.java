@@ -76,15 +76,15 @@ public final class PathClassFactory {
 		 */
 		NECROSIS,
 		/**
-		 * Other classification
-		 */
-		OTHER,
-		/**
 		 * Region class. This behaves slightly differently from other classes, e.g. it is not filled in when applied to
-		 * annotations.  Consequently it is good to heavily annotated regions, or possibly detected tissue 
+		 * annotations.  Consequently it is good to heavily annotated regions, or possibly detected tissue
 		 * containing further annotations inside.
 		 */
 		REGION,
+		/**
+		 * Other classification
+		 */
+		OTHER,
 		/**
 		 * General class to represent something 'positive'
 		 */
@@ -92,31 +92,34 @@ public final class PathClassFactory {
 		/**
 		 * General class to represent something 'negative'
 		 */
-		NEGATIVE;
+		NEGATIVE,
+		LIMAOJI;
 		
 		
 		PathClass getPathClass() {
 			switch (this) {
 			case IGNORE:
-				return PathClassFactory.getPathClass("Ignore*", ColorTools.packRGB(180, 180, 180));
+				return PathClassFactory.getPathClass("忽略*", ColorTools.packRGB(180, 180, 180));
 			case IMAGE_ROOT:
-				return PathClassFactory.getPathClass("Image", ColorTools.packRGB(128, 128, 128));
+				return PathClassFactory.getPathClass("毛球炎症浸润", ColorTools.packRGB(128, 128, 128));
 			case IMMUNE_CELLS:
-				return PathClassFactory.getPathClass("Immune cells", ColorTools.packRGB(160, 90, 160));
+				return PathClassFactory.getPathClass("休止期毛囊(外根鞘含色素失禁颗粒)", ColorTools.packRGB(160, 90, 160));
 			case NECROSIS:
-				return PathClassFactory.getPathClass("Necrosis", ColorTools.packRGB(50, 50, 50));
+				return PathClassFactory.getPathClass("休止期毛囊(淋巴细胞移入外毛根鞘)", ColorTools.packRGB(50, 50, 50));
 			case OTHER:
-				return PathClassFactory.getPathClass("Other", ColorTools.packRGB(255, 200, 0));
+				return PathClassFactory.getPathClass("其他", ColorTools.packRGB(255, 200, 0));
 			case REGION:
-				return PathClassFactory.getPathClass("Region*", ColorTools.packRGB(0, 0, 180));
+				return PathClassFactory.getPathClass("休止期毛囊(嗜酸细胞移入外毛根鞘)", ColorTools.packRGB(0, 0, 180));
 			case STROMA:
-				return PathClassFactory.getPathClass("Stroma", ColorTools.packRGB(150, 200, 150));
+				return PathClassFactory.getPathClass("毛囊索(含色素失禁颗粒)", ColorTools.packRGB(150, 200, 150));
 			case TUMOR:
-				return PathClassFactory.getPathClass("Tumor", ColorTools.packRGB(200, 0, 0));
+				return PathClassFactory.getPathClass("毛乳头(含有色素失禁颗粒)", ColorTools.packRGB(130, 0, 0));
 			case POSITIVE:
-				return PathClassFactory.getPositive(null);
+				return PathClassFactory.getPathClass("其他(阳性)", ColorTools.packRGB(10, 60, 80));
 			case NEGATIVE:
-				return PathClassFactory.getNegative(null);
+				return PathClassFactory.getPathClass("其他(阴性)", ColorTools.packRGB(120, 90, 0));
+			case LIMAOJI:
+				return PathClassFactory.getPathClass("毛囊索（无色素失禁颗粒）", ColorTools.packRGB(0, 150, 201));
 			default:
 				throw new IllegalArgumentException("Unknown value!");
 			}

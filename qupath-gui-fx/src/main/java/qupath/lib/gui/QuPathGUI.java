@@ -1874,8 +1874,9 @@ public class QuPathGUI {
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.STROMA),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.IMMUNE_CELLS),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.NECROSIS),
-				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.OTHER),
+				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.LIMAOJI),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.REGION),
+				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.OTHER),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.IGNORE),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.POSITIVE),
 				PathClassFactory.getPathClass(PathClassFactory.StandardPathClasses.NEGATIVE)
